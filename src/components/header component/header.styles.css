@@ -1,0 +1,250 @@
+
+.header {
+    height: 8em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10;
+    /* border-bottom: 1px solid #992600; */
+}
+
+.nav-contents {
+    width: 100%;
+    max-width: 40em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-top: -1em;
+}
+.subheader{
+    width: 100%;
+    max-width: 8em;
+    min-height: 10em;
+    display: none;
+    text-transform: capitalize;
+    background-color: rgb(253, 248, 255); 
+    transition: 2s ease-out;
+}
+
+.subheader .lifestyle,
+.subheader .memoir,
+.subheader .poetry,
+.subheader .excerpts{
+    padding: 0.4em;
+}
+.subheader .lifestyle:hover,
+.subheader .memoir:hover,
+.subheader .poetry:hover,
+.subheader .excerpts:hover{
+    color: gray;
+    background-color: antiquewhite;
+}
+
+.category-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.category-container:hover .subheader{
+    display: block;
+    position: absolute;
+    top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    padding: 0.6em;
+    transition: 0.5s ease-in-out;
+}
+.category-container:hover .subheader .lifestyle, .subheader .memoir, .subheader .excerpts, .subheader .poetry{
+    margin-top: 1em;
+    border-bottom: 1px dotted;
+}
+
+.sign-up-container {
+    padding: 0.4em 0.8em;
+    border-radius: 1.1em;
+    margin-left: 2em;
+}
+
+.home,
+.about,
+.books,
+.category,
+.sign-up {
+    width: 100%;
+    text-transform: uppercase;
+
+}
+
+
+.home-container:hover .home,
+.category-container:hover .category,
+.about-container:hover .about,
+.book-container:hover .books,
+.sign-up-container:hover .sign-up
+ {
+    color: darkgrey;
+    transition: 0.5s ease-out;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(45, 44, 44);
+}
+
+.logo {
+    width: 8em;
+    height: 8em;
+    
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.toggle {
+    display: none;
+}
+
+.social-icons {
+    margin-top: -1em;
+    width: 100%;
+    max-width: 8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1em;
+    
+}
+
+.socials {
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+}
+
+.sub-con {
+    width: 100%;
+    height: 5em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5.1em;
+    transform: translateY(-120%);
+    transition: 0.5s ease-in-out;
+    z-index: -4;
+}
+
+.showsub {
+    transform: translateY(0);
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .header {
+        z-index: 10;
+    }
+
+    .social-icons {
+        order: 2;
+        margin-bottom: -1em;
+        display: none;
+    }
+
+    .toggle {
+        display: flex;
+        align-items: center;
+        order: 3;
+        margin-right: 1.5em;
+        /* margin-bottom: -1em; */
+    }
+
+    .bars,
+    .times {
+        font-size: 2em;
+    }
+
+    .nav-contents {
+        /* border: 1px solid red; */
+        height: 30em;
+        position: absolute;
+        z-index: 10;
+        top: 9em;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: rgb(167, 111, 111); */
+        background-color: rgba(253, 188, 102, 1);
+
+
+    }
+    .sign-up-container{
+        margin: 0;
+    }
+    .category-container:hover .subheader{
+        display: none;
+    }
+    .category-container .down-icon{
+        display: none;
+    }
+
+    .home-container,
+    .about-container,
+    .book-container,
+    .category-container,
+    .sign-up-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .home,
+    .about,
+    .books,
+    .category,
+    .sign-up {
+        width: 100%;
+        padding: 1em;
+        color: #fff;
+        text-align: center;
+    }
+
+   
+
+    .home-container:hover,
+    .book-container:hover,
+    .about-container:hover,
+    .category-container:hover {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10em;
+        background-color: #ff7b00;
+        cursor: pointer;
+    }
+
+    .show {
+        transform: translateY(-150%);
+        transition: all 1s ease-in-out;
+
+    }
+
+    .hidee {
+        transform: translateY(0);
+        transition: all 1s ease-in-out;
+
+    }
+}

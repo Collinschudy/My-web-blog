@@ -1,0 +1,9 @@
+.categorypage{
+    border: 1px solid red;
+    padding-top: 10em;
+}
+
+.lifestyle-section{
+    display: flex;
+    flex-direction: column;
+}

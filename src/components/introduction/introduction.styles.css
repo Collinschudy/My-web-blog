@@ -1,0 +1,134 @@
+
+.introduction-one{
+    font-family: 'Raleway', sans-serif;
+    /* border: 1px solid red; */
+    padding-top: 7em;
+    width: 100%;
+    height: 65em;
+    display: flex;
+    /* background-color: rgba(250, 214, 168, 0.1); */
+    
+}
+
+.background-img{
+    
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 97%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.introduction-text{
+    /* border: 2px solid red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.introduction-text .explore-button{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    background-color: #992600;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0.8em;
+    justify-content: center;
+
+}
+.introduction-text .explore-button .arrow-right{
+    font-size: 1.3em;
+    margin-left: 0.5em;
+}
+
+.text-container{
+    /* border: 1px solid; */
+    height: 30em;
+    width: 75%;
+}
+.text-container .intro-header{
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    /* transform:translate3d(44deg); */
+}
+.text-container p{
+    font-weight: 400;
+    line-height: 2em;
+}
+
+.background-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 24em 24em 4em 0em;
+    position: absolute;
+    top: 4em;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .introduction-one{
+    /* border: 1px solid; */
+    height: 55em;
+    }
+
+   .background-img{
+    margin-top: 3em;
+    /* border: 1px solid red; */
+    height: 80%;
+   } 
+   .background-img img{
+    border-radius: 0;
+    height: 100%;
+    background-size: cover;
+   }
+}
+
+
+@media screen and (max-width: 700px) {
+    .introduction-one{
+        height: 35em;
+    }
+    .background-img{
+        display: none;
+    }
+    .background-img img{
+        display: none;
+    }
+
+    .introduction-text{
+        width: 100%;
+        height: 34em;
+        margin-top: 4em;
+        text-align: center;
+    }
+    .text-container{
+        width: 100%;
+    }
+    .text-container .intro-header{
+        font-size: 3em;
+        margin-bottom: 2rem;
+        text-align: center;
+        width: 100%;
+        line-height: 1.5em
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introduction-text .explore-button{
+        border: 3px solid blue;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .text-container .intro-header{
+        font-size: 2em;
+    }
+}
