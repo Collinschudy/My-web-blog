@@ -1,5 +1,5 @@
 import './bookorder.styles.css';
-import image from '../../assets/sincerely-media-CXYPfveiuis-unsplash.jpg';
+import image from '../../assets/PicsArt_08-16-11.15.42.png';
 
 const BookOrder = () => {
     return (
@@ -9,11 +9,10 @@ const BookOrder = () => {
                 <p className='order'>Order my book</p>
                 <p className='book-title'>The Pot And The Chess </p>
                 <p className='body'> 
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta eaque hic in mollitia?
-                    Blanditiis, ea deserunt harum impedit itaque at non ullam omnis, aspernatur distinctio,
-                    a rerum ipsa accusamus quas illo soluta
-                    consectetur excepturi deleniti facilis? Deleniti hic error,
-                    maxime accusantium sint odit quam ut. The essence of Ipsum tu has venido ala arilla no has buscado.
+                The Pot And The Chess is a collection of poetry and prose about love, loss, emptiness and life. 
+                The book is divided into two major parts which focus on a man and a woman in their search for answers
+                 to life and their questions about gender equality. 
+                These 40 poems open up a door. They light a candle, and they say to you; welcome.
                 </p>
                 </div>
                

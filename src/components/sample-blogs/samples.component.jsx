@@ -9,12 +9,13 @@ import { HashLink } from 'react-router-hash-link'
 const SampleBlog = () => {
     return (
         <div className='sample-blog-container'>
+            
             <div className="first-sample">
                 <div className="image-box1">
                     <img src={image_1} alt="text reading 'the link between creativity and depression'" />
                 </div>
                 <p>THE LINK BETWEEN CREATIVITY AND DEPRESSION</p>
-                <HashLink className='readmore' to='/lifestyle#lsf'>Read More</HashLink>
+                <HashLink className='readmore' to='/category/lifestyle#lsf'>Read More</HashLink>
 
             </div>
 
@@ -24,7 +25,7 @@ const SampleBlog = () => {
 
                 </div>
                 <p>EXCERPTS FROM VIRGINIA WOOLF</p>
-                <HashLink className='readmore' to='/excerpts'>Read More</HashLink>
+                <HashLink className='readmore' to='/category/excerpt#fep'>Read More</HashLink>
             </div>
 
             <div className="third-sample">
@@ -32,7 +33,7 @@ const SampleBlog = () => {
                     <img src={image_3} alt='depicting mindfulness' />
                 </div>
                 <p>THE ART OF MINDFUL LIVING</p>
-                <HashLink className='readmore' to='/lifestyle#lsft'>Read More</HashLink>
+                <HashLink className='readmore' to='/category/lifestyle#lsft'>Read More</HashLink>
             </div>
         </div>
     )

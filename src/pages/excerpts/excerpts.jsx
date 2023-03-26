@@ -54,8 +54,10 @@ const Excerpt = () => {
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[2]} alt='postimage' />
                                 </div>
+                                <br/>
                                 <p>{body[7]}</p>
                                 <p>{body[8]}</p>
+                                <br/>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[0]} alt='postimage' />
                                 </div>

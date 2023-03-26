@@ -15,10 +15,22 @@ import Poetry from './pages/poetry/poetry';
 import CategoryPage from './pages/category-page/categorypage.';
 import Excerpt from './pages/excerpts/excerpts';
 import Memoir from './pages/memoir/memoir';
+import BookPage from './pages/book-page/bookpage';
+import { FaAngleUp } from "react-icons/fa";
+import Footer from './components/footer-section/footer.component';
+import ContactUs from './pages/send-email-page/sendemail';
+
+
+
+
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
-  const [currentUser, setCurrentUser] = useState('')
+  const [currentUser, setCurrentUser] = useState('');
+  const [arrowScrollUp, setArrowScrollUp] = useState(false);
+  const [scrollUp, setScrollUp] = useState(false);
+ 
+ 
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (userAuth) => {
@@ -35,20 +47,53 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
+  
+
+  const handleScroll = () => {
+    if(window.scrollY >= 50){
+      setScrollUp(true);
+    }else{
+      setScrollUp(false);
+    }
+    if (window.scrollY >= 50) {
+      setArrowScrollUp(true);
+    } else {
+      setArrowScrollUp(false);
+    }
+  }
+  window.addEventListener('scroll', handleScroll);
+
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+
  
   return (
-    <div>
+    <div clasName='App'>
+       <div
+        className={`arrowUpBox ${arrowScrollUp && "arrowScroll"}`}
+        onClick={handleScrollTop}
+      >
+        <FaAngleUp className="arrowUp" />
+      </div>
        <Header currentUser={currentUser}/>
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/signin' element={<SignIn  setIsAuth={setIsAuth} />} />
-          <Route exact path='/createpost' element={<CreatePost /> } />
-          <Route exact path='/lifestyle' element={<Lifestyle />} />
-          <Route exact path='/poetry' element={<Poetry />} />
-          <Route exact path='/excerpt' element={<Excerpt />} />
-          <Route exact path='/memoir' element={<Memoir />} />
-          <Route exact path='/category' element={<CategoryPage />} />
+          <Route exact path='/' element={<HomePage />} />
+          <Route exact path='/signin' element={<SignIn  setIsAuth={setIsAuth} />} />
+          <Route exact path='/createpost' element={<CreatePost  /> } />
+          <Route exact path='/category/lifestyle' element={<Lifestyle  />} />
+          <Route exact path='/category/poetry' element={<Poetry  />} />
+          <Route exact path='/category/excerpt' element={<Excerpt  />} />
+          <Route exact path='/category/memoir' element={<Memoir  />} />
+          <Route exact path='/category' element={<CategoryPage  />} />
+          <Route exact path='/mybook' element={<BookPage  />} />
+          <Route exact path='/sendemail' element={<ContactUs  />} />
         </Routes>
+        <Footer />
     </div>
   );
     

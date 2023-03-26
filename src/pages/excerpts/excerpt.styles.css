@@ -16,7 +16,7 @@
     border-radius: 0 3em 0 0;
     box-shadow: 0.2em 0em .7em 1px rgb(198, 194, 194);
     padding: 2em;
-    margin-bottom: 10em;
+    margin-bottom: 35em;
 }
 
 .firstexcerptpost h2, .secondexcerptpost h2, .thirdexcerptpost h2{
@@ -41,5 +41,8 @@
     }
     .lifescribing, .category-indicator{
         display: none;
+    }
+    .scream{
+        
     }
 }

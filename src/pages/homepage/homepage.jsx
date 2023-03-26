@@ -5,7 +5,7 @@ import SampleBlog from "../../components/sample-blogs/samples.component";
 
 
 import './homepage.css';
-import Footer from "../../components/footer-section/footer.component";
+
 
 const HomePage = () => {
     return (
@@ -14,7 +14,6 @@ const HomePage = () => {
             <BookOrder />
             <SampleBlog />
             <AboutSection />
-            <Footer />
         </div>
     )
 }

@@ -28,15 +28,7 @@ export const storage = getStorage(app)
 export const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 
-export const signInWithGoogle = async ({setIsAuth}) => {
-    try {
-        await signInWithPopup(auth, provider);
-        await setIsAuth(true);
 
-    }catch (error) {
-        (console.log(error.message))
-    }
-}
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
     if (!userAuth) return;

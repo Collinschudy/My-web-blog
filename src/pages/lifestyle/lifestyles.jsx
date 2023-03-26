@@ -164,17 +164,24 @@ const Lifestyle = () => {
                                 <p>{body[10]}</p>
                                 <p>{body[11]}</p>
                                 <br /><br />
-                                <p>{body[12]}</p>
+                                <p><b>{body[12]}</b></p>
                                 <p>{body[13]}</p>
                                 <p>{body[14]}</p>
                                 <p>{body[15]}</p>
                                 <p>{body[16]}</p>
                                 <p>{body[17]}</p>
                                 <p>{body[18]}</p>
+                                <br/>
+                                <div className="img-container">
+                                    <img className='scream' src={fileUrls[1]} alt='postimage' />
+                                </div>
+                                <br/>
                                 <p>{body[19]}</p>
                                 <p>{body[20]}</p>
                                 <p>{body[21]}</p>
-                                <p>{body[22]}</p>
+                                <br/><br/>
+                                <p><b>{body[22]}</b></p>
+                
                                 <p>{body[23]}</p>
                                 <p>{body[24]}</p>
                                 <p>{body[25]}</p>
@@ -186,12 +193,18 @@ const Lifestyle = () => {
                                 <p>{body[31]}</p>
                                 <p>{body[32]}</p>
                                 <p>{body[33]}</p>
+                                <br/>
+                                <div className="img-container">
+                                    <img className='scream' src={fileUrls[2]} alt='postimage' />
+                                </div>
+                                <br/>
                                 <p>{body[34]}</p>
                                 <p>{body[35]}</p>
                                 <p>{body[36]}</p>
                                 <p>{body[37]}</p>
                                 <p>{body[38]}</p>
-                                <p>{body[39]}</p>
+                                <br/><br/>
+                                <p><b>{body[39]}</b></p>
                                 <p>{body[40]}</p>
                                 <p>{body[41]}</p>
                                 <p>{body[42]}</p>
@@ -199,19 +212,28 @@ const Lifestyle = () => {
                                 <p>{body[44]}</p>
                                 <p>{body[45]}</p>
                                 <p>{body[46]}</p>
+                                <br/>
                                 <p>{body[47]}</p>
-                                <p>{body[48]}</p>
+                                <br/><br/>
+                                <p><b>{body[48]}</b></p>
                                 <p>{body[49]}</p>
                                 <p>{body[50]}</p>
                                 <p>{body[51]}</p>
                                 <p>{body[52]}</p>
                                 <p>{body[53]}</p>
                                 <p>{body[54]}</p>
+                                <br/>
+                                <div className="img-container">
+                                    <img className='scream' src={fileUrls[3]} alt='postimage' />
+                                </div>
+                                <br/>
                                 <p>{body[55]}</p>
                                 <p>{body[56]}</p>
                                 <p>{body[57]}</p>
+                                <br/>
                                 <p>{body[58]}</p>
                                 <p>{body[59]}</p>
+                                <br/>
                                 <p>{body[60]}</p>
                             </div>
                         )
@@ -286,23 +308,39 @@ const Lifestyle = () => {
                         return (
                             <div className={tag} id='ftls'>
                                 <h2>{title}</h2>
+                                <p className="timestamp">{createdAt}</p>
+                                <p>{body[0]}</p>
+                                <br/>
+                                <p>{body[1]}</p>
+                                <br/>
+                                <p><em>{body[2]}</em> {body[3]}</p>
+                                <br/>
+                                <div className="img-container">
+                                    <img className='scream' src={fileUrls[0]} alt='postimage' />
+                                </div>
+                                <br/>
+                                <p>{body[4]}</p>
+                                <br/>
+                                <p>{body[5]}</p>
+                                <br/>
+                                <p>{body[6]}</p>
+                                <br/>
+                                <p>{body[7]}</p>
+                                <br/>
+                                <p>{body[8]}</p>
+                                <br/>
+                                <p>{body[9]}</p>
+                                <br/>
+                                <p>{body[10]}</p>
+                                <br/>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[1]} alt='postimage' />
                                 </div>
-                                <p className="timestamp">{createdAt}</p>
-                                <p>{body[0]}</p>
-                                <p>{body[1]}</p>
-                                <p>{body[2]}</p>
-                                <p>{body[3]}</p>
-                                <p>{body[4]}</p>
-                                <p>{body[5]}</p>
-                                <p>{body[6]}</p>
-                                <p>{body[7]}</p>
-                                <p>{body[8]}</p>
-                                <p>{body[9]}</p>
-                                <p>{body[10]}</p>
+                                <br/>
                                 <p>{body[11]}</p>
+                                <br/>
                                 <p>{body[12]}</p>
+                                <br/>
                                 <p>{body[13]}</p>
 
                             </div>
@@ -313,36 +351,50 @@ const Lifestyle = () => {
                             <div className={tag} id='sls'>
                                 <h2>{title}</h2>
                                 <div className="img-container">
-                                    <img className='scream' src={fileUrls[1]} alt='postimage' />
+                                    <img className='scream' src={fileUrls[0]} alt='postimage' />
                                 </div>
                                 <p className="timestamp">{createdAt}</p>
                                 <p>{body[0]}</p>
                                 <p>{body[1]}</p>
+                                <br/>
                                 <p>{body[2]}</p>
                                 <p>{body[3]}</p>
                                 <p>{body[4]}</p>
+                                <br/>
                                 <p>{body[5]}</p>
                                 <p>{body[6]}</p>
                                 <p>{body[7]}</p>
                                 <p>{body[8]}</p>
-                                <p>{body[9]}</p>
-                                <p>{body[10]}</p>
+                                <br/>
+                                <p><b>{body[9]}</b></p>
+                                <div className="img-container">
+                                    <img className='scream' src={fileUrls[1]} alt='postimage' />
+                                </div>
+                                <p>(Credit: Tumblr)</p>
+                                <br/>
+                                <p><b>1. Set practical goals.</b></p>
+                                <p> {body[10]}</p>
+                                <br/>
                                 <p>{body[11]}</p>
                                 <p>{body[12]}</p>
                                 <p>{body[13]}</p>
                                 <p>{body[14]}</p>
                                 <p>{body[15]}</p>
+                                <br/>
                                 <p>{body[16]}</p>
-                                <p>{body[17]}</p>
+                                <br/>
+                                <p><b>{body[17]}</b></p>
                                 <p>{body[18]}</p>
                                 <p>{body[19]}</p>
                                 <p>{body[20]}</p>
                                 <p>{body[21]}</p>
-                                <p>{body[22]}</p>
+                                <br/>
+                                <p><b>{body[22]}</b></p>
                                 <p>{body[23]}</p>
                                 <p>{body[24]}</p>
                                 <p>{body[25]}</p>
-                                <p>{body[26]}</p>
+                                <br/>
+                                <p><b>{body[26]}</b></p>
                                 <p>{body[27]}</p>
                                 <p>{body[28]}</p>
                             </div>

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 // import CustomButton from '../customButton/customButton';
 import Title from '../titleComponent/title.component';
-import image_1 from '../../assets/don-kaveen-9okF0SDiLOw-unsplash.jpg';
+import image_1 from '../../assets/C360_2022-11-11-07-06-42-042-01.jpeg';
 
 const AboutSection = ({ isAboutPage }) => {
   const [showSectionSlide, setShowSectionSlide] = useState(false);

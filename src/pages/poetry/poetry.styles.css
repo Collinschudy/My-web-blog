@@ -18,7 +18,7 @@
     border-radius: 0 3em 0 0;
     box-shadow: 0.2em 0em .7em 1px rgb(198, 194, 194);
     padding: 2em;
-    margin-bottom: 4em;
+    margin-bottom: 35em;
 }
 
 .firstpoetrypost h2, 
@@ -26,13 +26,8 @@
 .thirdpoetrypost h2, 
 .fourthpoetrypost h2, 
 .fifthpoetrypost h2{
-    /* text-align: center; */
-    /* padding: 0.5em; */
     padding: 1em 0;
 }
-/* .firstpoetrypost h2{
-    padding: 1em 0;
-} */
 
 .timestamp{
     margin-bottom: 1em;

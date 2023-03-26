@@ -2,7 +2,7 @@ import './loader.styles.css';
 
 const WithSpinner = () => {
   return ( 
-    <div className='wrapper'>
+    <div className='loader-wrapper'>
       <div className='spinner' />
     </div>
    );

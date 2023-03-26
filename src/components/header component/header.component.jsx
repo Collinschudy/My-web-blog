@@ -1,18 +1,27 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 
 import './header.styles.css';
-import  Logo from '../../assets/IMG-20230319-WA0017 (1).jpg';
+import  Logo from '../../assets/logocorrection-removebg-preview.png';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaBars, FaTimes } from 'react-icons/fa';
+import { HiMail } from 'react-icons/hi';
 import { RiAdminLine } from 'react-icons/ri'
 import { FiChevronDown } from 'react-icons/fi';
-import { signInWithGoogle, auth } from '../../firebase/firebase.utils';
+import { auth } from '../../firebase/firebase.utils';
 import { signOut } from 'firebase/auth';
+import { useLocation } from 'react-router-dom';
 
 
 
 const Header = ({ currentUser, setIsAuth }) => {
     const [showheader, setShowHeader] = useState(true);
+    const [pathName, setPathName] = useState('');
+    const location = useLocation();
+    const { pathname } = location;
+
+    useEffect(() => {
+        setPathName(pathname)
+    }, [pathname])
     const signUserOut = async () => {
         await signOut(auth);
         await setIsAuth(false);
@@ -24,21 +33,21 @@ const Header = ({ currentUser, setIsAuth }) => {
                 <img src={Logo} alt="logo" />
             </div>
             <div className={`${showheader ? 'show' : 'hidee'} nav-contents`}>
-                <div className="home-container">
-                    <Link to="/" onClick={() => setShowHeader(!showheader)} className="home">Home</Link>
+                <div className={`${pathName ==='/' ? 'pathname': ''} home-container`}>
+                    <Link to="/" onClick={() => setShowHeader(!showheader)} className="home"> Home</Link>
                 </div>
                 {currentUser ?
-                    <div className="about-container">
+                    <div className={`${pathName.includes('/createpost') ? 'pathname': ''} about-container`}>
                         <Link to="/createpost" onClick={() => setShowHeader(!showheader)} className="about"> Create Post</Link>
                     </div>
                     :
                     ""
                 }
 
-                <div className="book-container">
-                    <Link to="/signin" onClick={() => setShowHeader(!showheader)} className="books">Books</Link>
+                <div className={`${pathName.includes('/mybook') ? 'pathname': ''} book-container`}>
+                    <Link to="/mybook" onClick={() => setShowHeader(!showheader)} className="books"> My Book </Link>
                 </div>
-                <div className="category-container">
+                <div className={`${pathName.includes('/category') ? 'pathname': ''} category-container`}>
                     <Link to="/category" onClick={() => setShowHeader(!showheader)} className="category">
                         Categories
                         <FiChevronDown className='down-icon'/>
@@ -49,13 +58,14 @@ const Header = ({ currentUser, setIsAuth }) => {
                 {currentUser ?
                     (
                         <div className="sign-up-container">
-                            <Link to="" className='sign-up' onClick={signUserOut}> Sign Out </Link>
+                            <Link to="/" className='sign-up' onClick={signUserOut}> Sign Out </Link>
                         </div>
                     )
                     :
-                    <div className="sign-up-container">
-                        <Link to="" className='sign-up' onClick={signInWithGoogle}> Sign In </Link>
+                    <div className="welcome">
+                        Welcome, Friend
                     </div>
+                    
 
                 }
 
@@ -79,9 +89,9 @@ const Header = ({ currentUser, setIsAuth }) => {
             <div className="social-icons">
                 <FaFacebook className='socials' />
                 <FaInstagram className='socials' />
-                <FaTwitter className='socials' />
+                <Link to='/sendemail'><HiMail className='socials' /></Link>
                 <FaLinkedin className='socials' />
-                <Link to='signin'><RiAdminLine className='socials' /></Link>
+                <Link to='/signin'><RiAdminLine className='socials' /></Link>
             </div>
             {/* <div className={`${showSubheader ? 'showsub' : ''} sub-con`}>
                 <SubHeader />
@@ -94,10 +104,10 @@ const Header = ({ currentUser, setIsAuth }) => {
 const SubHeader = () => {
     return (
         <div className="subheader">
-            <Link to='/lifestyle' className='lifestyle'>Lifestyle</Link>
-            <Link to='/memoir' className='memoir' >Memoir</Link>
-            <Link to='/poetry' className='poetry' >Poetry</Link>
-            <Link to='/excerpt' className='excerpts'>Excerpts</Link>
+            <Link to='/category/lifestyle' className='lifestyle'>Lifestyle</Link>
+            <Link to='/category/memoir' className='memoir' >Memoir</Link>
+            <Link to='/category/poetry' className='poetry' >Poetry</Link>
+            <Link to='/category/excerpt' className='excerpts'>Excerpts</Link>
         </div>
     )
 }

@@ -8,7 +8,10 @@
     background-color: #fff;
     position: fixed;
     z-index: 10;
-    /* border-bottom: 1px solid #992600; */
+    box-shadow: 0 0.2em 0.3em rgba(207, 194, 194, 0.3);
+}
+.pathname{
+    text-decoration: underline;
 }
 
 .nav-contents {
@@ -23,6 +26,7 @@
     letter-spacing: 1px;
     margin-top: -1em;
 }
+
 .subheader{
     width: 100%;
     max-width: 8em;
@@ -69,9 +73,30 @@
 }
 
 .sign-up-container {
-    padding: 0.4em 0.8em;
-    border-radius: 1.1em;
     margin-left: 2em;
+}
+.welcome{
+    animation: scale 3s linear infinite;
+    font-family: 'Dancing Script', cursive;
+    color: #992600;
+    font-size: 1.3em;
+}
+@keyframes scale{
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.015);
+    }
+    50%{
+        transform: scale(1.025);
+    }
+    75%{
+        transform: scale(1.035);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .home,
@@ -91,8 +116,8 @@
 .book-container:hover .books,
 .sign-up-container:hover .sign-up
  {
-    color: darkgrey;
     transition: 0.5s ease-out;
+    text-decoration: underline;
 }
 
 a {
@@ -101,8 +126,8 @@ a {
 }
 
 .logo {
-    width: 8em;
-    height: 8em;
+    width: 9em;
+    height: 9em;
     
 }
 .logo img{
@@ -148,17 +173,20 @@ a {
 }
 
 
-
-
-
 @media screen and (max-width: 700px) {
     .header {
         z-index: 10;
+        height: 6em;
+    }
+    .logo{
+        width: 6em;
+        height: 6em;
+    }
+    .welcome{
+        color: #fff;
     }
 
     .social-icons {
-        order: 2;
-        margin-bottom: -1em;
         display: none;
     }
 
@@ -167,7 +195,6 @@ a {
         align-items: center;
         order: 3;
         margin-right: 1.5em;
-        /* margin-bottom: -1em; */
     }
 
     .bars,
@@ -176,26 +203,25 @@ a {
     }
 
     .nav-contents {
-        /* border: 1px solid red; */
-        height: 30em;
+        height: calc(100vh - 6.9em);
         position: absolute;
         z-index: 10;
-        top: 9em;
+        top: 7.5em;
         bottom: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* background-color: rgb(167, 111, 111); */
-        background-color: rgba(253, 188, 102, 1);
-
-
+        background-color: #992600;
     }
+
     .sign-up-container{
         margin: 0;
     }
+
     .category-container:hover .subheader{
         display: none;
     }
+    
     .category-container .down-icon{
         display: none;
     }
@@ -223,16 +249,26 @@ a {
         text-align: center;
     }
 
-   
+    .home-container:hover .home,
+    .category-container:hover .category,
+    .about-container:hover .about,
+    .book-container:hover .books,
+    .sign-up-container:hover .sign-up{
+        color: #fff;
+        text-decoration: none;
+        opacity: 1;
+    }
 
     .home-container:hover,
     .book-container:hover,
     .about-container:hover,
-    .category-container:hover {
+    .category-container:hover,
+    .sign-up-container:hover {
         width: 100%;
         max-width: 100%;
         padding: 0 10em;
-        background-color: #ff7b00;
+        background-color: rgba(207, 194, 194, 0.3);
+        
         cursor: pointer;
     }
 
@@ -246,5 +282,8 @@ a {
         transform: translateY(0);
         transition: all 1s ease-in-out;
 
+    }
+    .pathname{
+        text-decoration: none;
     }
 }
