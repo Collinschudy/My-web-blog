@@ -1,0 +1,13 @@
+.bookreview-container{
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookreview-container h2{
+    text-align: center;
+    text-decoration: underline #992600;
+}

@@ -50,6 +50,9 @@
     width: 60%;
     height: 60%;
 }
+.click-to-buy:hover{
+    text-decoration: underline #992600;
+}
 
 @media screen and (max-width: 1100px) {
     .bookorder{

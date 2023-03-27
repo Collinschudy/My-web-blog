@@ -2,8 +2,8 @@ const reviewData = [
     {
         id: 1,
         author: 'Sandra Osas',
-        message: "Rachael's gift to the world lie in how each poem connects with the reader in a most intimidating way. This is her first book, but she has a complete control of her rhythm and style",
-        rank: 'Poet and Novelist'
+        message: "Rachael's gift to the world lie in how each poem connects with the reader in a most intimate way. This is her first book, but she has a complete control of her rhythm and style",
+        rank: 'Poet and Novelist.'
     },
     {
         id: 2,
@@ -12,3 +12,5 @@ const reviewData = [
         rank: 'Award Winning Poet & Author of Dear Gravity.'
     }
 ]
+
+export default reviewData;

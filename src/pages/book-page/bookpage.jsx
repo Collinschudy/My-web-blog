@@ -1,5 +1,6 @@
 import './bookpage.styles.css';
 import image from '../../assets/PicsArt_08-16-11.15.42.png';
+import BookReview from '../../components/bookreviews/review.component';
 
 
 const BookPage = () => {
@@ -35,7 +36,9 @@ const BookPage = () => {
                         </button>
                     </p>
                 </div>
+                <BookReview />
             </div>
+            
         </div>
     )
 }
