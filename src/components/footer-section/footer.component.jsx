@@ -1,7 +1,7 @@
 import './footer.styles.css';
 import Logo from '../../assets/logocorrection-removebg-preview.png';
 import { Link } from 'react-router-dom'
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { handleScrollTop } from '../backToTop/backToTop';
 
 
