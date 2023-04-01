@@ -63,7 +63,7 @@ const SixthPost = ({ contentList, setContentList }) => {
                                 <p>{body[8]}</p>
                                 <br />
                                 <p><b>{body[9]}</b></p>
-                                <div style={{'height': '50em'}} className="img-container">
+                                <div style={{'height': '20em', 'objectFit': 'cover'}} className="img-container">
                                     <img className='scream' src={fileUrls[1]} alt='postimage' />
                                 </div>
                                 <p>(Credit: Tumblr)</p>
