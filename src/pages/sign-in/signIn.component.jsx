@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import './signIn.styles.css';
-// import { signInWithGoogle } from "../../firebase/firebase.utils";
 import { signInWithPopup } from "firebase/auth";
 import { provider, auth } from "../../firebase/firebase.utils";
 

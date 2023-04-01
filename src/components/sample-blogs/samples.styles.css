@@ -58,6 +58,16 @@
     transform: scale(1.02);
 }
 
+@media screen and (max-width: 1100px) {
+    .sample-blog-container{
+        padding: 0 1em;
+    }
+
+    .first-sample, .second-sample, .third-sample{
+        padding: 0 0.5em;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .sample-blog-container{
         width: 100%;

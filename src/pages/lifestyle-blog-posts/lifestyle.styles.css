@@ -27,22 +27,32 @@
 .firstpost, 
 .secondpost, 
 .thirdpost,.fourthpost, 
-.fifthlifestylepost,
-.sixthlifestylepost{
+.fifthpost,
+.sixthpost{
     width: 60%;
     line-height: 1.5em;
     border-radius: 0 3em 0 0;
     box-shadow: 0.2em 0em .7em 1px rgb(198, 194, 194);
     padding: 2em;
-    margin-bottom: 35em;
+    margin-bottom: 4em;
+}
+
+
+.firstpost p, 
+.secondpost p, 
+.thirdpost p,.fourthpost p, 
+.fifthpost p,
+.sixthpost p{
+    text-align: justify;
+    line-height: 2em;
 }
 
 .firstpost h2,
 .secondpost h2, 
 .thirdpost h2, 
 .fourthpost h2, 
-.fifthlifestylepost h2,
-.sixthlifestylepost h2{
+.fifthpost h2,
+.sixthpost h2{
     text-align: center;
     padding: 0.5em;
 }
@@ -66,9 +76,23 @@
     height: 100%;
 }
 
+
+@media screen and (max-width: 1100px){
+    .firstpost, 
+.secondpost, 
+.thirdpost,.fourthpost, 
+.fifthpost,
+.sixthpost{
+        width: 70%;
+    }
+    .img-container{
+        height: 20em;
+    }
+}
+
 @media screen and (max-width: 700px) {
-    .firstpost,.secondpost, .thirdpost, .fourthpost, .fifthlifestylepost,
-    .sixthlifestylepost{
+    .firstpost,.secondpost, .thirdpost, .fourthpost, .fifthpost,
+    .sixthpost{
         width: 100%;
         box-shadow: none;
     }

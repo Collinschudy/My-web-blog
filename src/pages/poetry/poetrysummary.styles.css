@@ -1,0 +1,7 @@
+.poetry-summary{
+    padding-top: 12em;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

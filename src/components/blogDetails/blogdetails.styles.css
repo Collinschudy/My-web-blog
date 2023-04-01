@@ -1,0 +1,68 @@
+.blogdetails{
+    width: 30%;
+   
+     
+    /* border: 1px solid green; */ 
+}
+.memoir-styling{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-wrapper{
+    box-shadow: .1em .2em .3em antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    width: 22em;
+    min-height: 30em;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin-bottom: 4em;
+    border-radius: 1em;
+}
+.blog-body{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 2em;
+}
+
+.summaryImage{
+    width: 20em;
+    height: 20em;
+    cursor: pointer;
+}
+
+.summaryImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.blog-title{
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+@media screen  and (max-width: 1100px){
+    .blogdetails{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen  and (max-width: 700px){
+    .blogdetails{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

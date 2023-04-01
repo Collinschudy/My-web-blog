@@ -1,29 +1,30 @@
 import './excerptslist.styles.css';
-import { HashLink } from 'react-router-hash-link';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Excerptslist = () => {
+    const navigate = useNavigate()
     return (
         <div className="excerpts-section">
-            <h2>Excerpts</h2>
+            <h2 onClick={() => navigate('/category/excerpt')} >Excerpts</h2>
             <br/>
             <ul>
                 <li>
-                    <HashLink to='/category/excerpt#sep'>
+                    <Link to='/category/excerpt/secondpost'>
                        1. How much private is too much private?
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/excerpt#fep'>
+                    <Link to='/category/excerpt/firstpost'>
                         2. Excerpts from Virginia Woolf
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/excerpt#tep'>
+                    <Link to='/category/excerpt/thirdpost'>
                         3. In Sarah's Point of View
-                    </HashLink>
+                    </Link>
                 </li>
             </ul>
         </div>

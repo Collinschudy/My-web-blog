@@ -1,4 +1,4 @@
-.excerptpage{
+.memoirpage{
     padding-top: 10em;
     display: flex;
     flex-direction: column;
@@ -7,42 +7,52 @@
     font-family: 'Raleway', sans-serif;
     background-color: rgba(250, 214, 168, 0.2);
 }
+.category-indicator-m{
+    position: sticky;
+    left: 1em;
+    top: 10em;
+    font-family: 'Charmonman', cursive;
+    font-size: 1.5em;
+    align-self: flex-start;
+    color: #992600;
+}
 
-.firstexcerptpost, 
-.secondexcerptpost, 
-.thirdexcerptpost{
+.firstpost, 
+.secondpost, 
+.thirdpost{
     width: 60%;
     line-height: 1.5em;
     border-radius: 0 3em 0 0;
     box-shadow: 0.2em 0em .7em 1px rgb(198, 194, 194);
     padding: 2em;
-    margin-bottom: 35em;
+    margin-bottom: 4em;
 }
 
-.firstexcerptpost h2, .secondexcerptpost h2, .thirdexcerptpost h2{
+.firstpost p, 
+.secondpost p, 
+.thirdpost p{
+    text-align: justify;
+    line-height: 2em;
+}
+
+.firstpost h2, .secondpost h2, .thirdpost h2{
     text-align: center;
     padding: 0.5em;
 }
-.firstpoetrypost h2{
+.firstmemoirpost h2{
     padding: 1em 0;
 }
 
-.img-container .scream{
-    width: 100%;
-    height: 100%;
-} 
+
 
 @media screen and (max-width: 700px) {
-    .firstexcerptpost,
-    .secondexcerptpost,
-    .thirdexcerptpost{
+    .firstpost,
+    .secondpost,
+    .thirdpost{
         width: 100%;
         box-shadow: none;
     }
-    .lifescribing, .category-indicator{
+    .lifescribing, .category-indicator-m{
         display: none;
-    }
-    .scream{
-        
     }
 }

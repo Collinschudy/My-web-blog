@@ -1,23 +1,24 @@
 import './memoirlist.styles.css';
-import { HashLink } from 'react-router-hash-link';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Memoirlist = () => {
+    const navigate = useNavigate()
     return (
         <div className="memoir-section">
-            <h2>Memoir</h2>
+            <h2 onClick={() => navigate('/category/memoir')}>Memoir</h2>
             <br/>
             <ul>
                 <li>
-                    <HashLink to='/category/memoir#fmp' smooth>
+                    <Link to='/category/memoir#fmp'>
                         1. The Memoir of Rachel Fredrick
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/memoir#smp'>
+                    <Link to='/category/memoir#smp'>
                         2. If I could Describe Myself in One Word
-                    </HashLink>
+                    </Link>
                 </li>
             </ul>
         </div>

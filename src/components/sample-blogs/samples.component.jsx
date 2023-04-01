@@ -15,7 +15,7 @@ const SampleBlog = () => {
                     <img src={image_1} alt="text reading 'the link between creativity and depression'" />
                 </div>
                 <p>THE LINK BETWEEN CREATIVITY AND DEPRESSION</p>
-                <HashLink className='readmore' to='/category/lifestyle#lsf'>Read More</HashLink>
+                <Link className='readmore' to='/category/lifestyle/firstpost'>Read More</Link>
 
             </div>
 
@@ -25,7 +25,7 @@ const SampleBlog = () => {
 
                 </div>
                 <p>EXCERPTS FROM VIRGINIA WOOLF</p>
-                <HashLink className='readmore' to='/category/excerpt#fep'>Read More</HashLink>
+                <Link className='readmore' to='/category/excerpt/'>Read More</Link>
             </div>
 
             <div className="third-sample">
@@ -33,7 +33,7 @@ const SampleBlog = () => {
                     <img src={image_3} alt='depicting mindfulness' />
                 </div>
                 <p>THE ART OF MINDFUL LIVING</p>
-                <HashLink className='readmore' to='/category/lifestyle#lsft'>Read More</HashLink>
+                <Link className='readmore' to='/category/lifestyle/'>Read More</Link>
             </div>
         </div>
     )

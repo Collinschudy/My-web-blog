@@ -1,41 +1,42 @@
 import './poetrylist.styles.css';
-import { HashLink } from 'react-router-hash-link';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Poetrylist = () => {
+    const navigate = useNavigate();
     return (
         <div className="poetry-section">
-            <h2>Poetry</h2>
+            <h2 onClick={() => navigate('/category/poetry')}>Poetry</h2>
             <br/>
             <ul>
                 <li>
-                    <HashLink to='/category/poetry#tpp' smooth>
+                    <Link to='/category/poetry/thirdpost'>
                         1. Face in The Mirror
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/poetry#spp' smooth>
+                    <Link to='/category/poetry/secondpost'>
                         2. Bleak
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/poetry#forthpp' smooth>
+                    <Link to='/category/poetry/fourthpost'>
                         3. The Easter Poem
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/poetry#fpp' smooth>
+                    <Link to='/category/poetry/firstpost'>
                         4. Paint or Get off the Ladder
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/poetry#fifthpp' smooth>
+                    <Link to='/category/poetry/fifthpost'>
                         5. Molten Magma
-                    </HashLink>
+                    </Link>
                 </li>
 
             </ul>

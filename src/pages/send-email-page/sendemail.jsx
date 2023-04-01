@@ -11,9 +11,10 @@ const ContactUs = () => {
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
 
-    const service_id = 'service_smrbq6l';
-    const template_id = 'template_okb6brb';
-    const public_key = 'ywr0xNoIVi-DO-rvY';
+    const service_id = `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`;
+    const template_id = `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`;
+    const public_key = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`;
+
     const form = useRef();
 
     const handleSendEmail = async (e) => {

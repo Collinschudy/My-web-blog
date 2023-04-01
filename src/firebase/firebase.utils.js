@@ -4,18 +4,16 @@ import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 import { GoogleAuthProvider } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
-import { useNavigate } from "react-router-dom";
-
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAVsqJS1XV-BVa7WaB1obO3p38afiEZAS8",
-  authDomain: "my-web-blog-89558.firebaseapp.com",
-  projectId: "my-web-blog-89558",
-  storageBucket: "my-web-blog-89558.appspot.com",
-  messagingSenderId: "422082788483",
-  appId: "1:422082788483:web:ece14b550503b14ebf2fb6",
-  measurementId: "G-9TNWCX19SV"
+  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_FIREBASE_AUTH_DOMAIN}`,
+  projectId: `${process.env.REACT_APP_FIREBASE_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_FIREBASE_storageBucket}`,
+  messagingSenderId: `${process.env.REACT_APP_FIREBASE_messagingSenderId}`,
+  appId: `${process.env.REACT_APP_FIREBASE_appId}`,
+  measurementId: `${process.env.REACT_APP_FIREBASE_measurementId}`
 };
 
 

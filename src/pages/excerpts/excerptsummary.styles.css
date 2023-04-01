@@ -1,0 +1,7 @@
+.excerpt-summary{
+    padding-top: 12em;
+    /* background-color: rgba(253, 188, 102, 0.2); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

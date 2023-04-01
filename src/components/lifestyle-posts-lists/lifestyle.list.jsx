@@ -1,47 +1,54 @@
 import './lifestylelist.styles.css';
-import { HashLink } from 'react-router-hash-link';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+
 
 const LifestyleList = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="lifestyle-section">
-            <h2>Lifestyle blog</h2>
-            <br/>
+            <h2 onClick={() => navigate('/category/lifestyle')}>Lifestyle blog</h2>
+            <br />
             <ul>
+
                 <li>
-                    <HashLink to='/category/lifestyle#lsf' smooth>
+
+                    <Link to='/category/lifestyle/firstpost'>
                         1. The Link Between Creativity and Depression
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/lifestyle#lss' smooth>
+                    <Link to='/category/lifestyle/secondpost'>
                         2. Seven Ways to Stay Creative and Inspired
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/lifestyle#lst' smooth>
+                    <Link to='/category/lifestyle/thirdpost'>
                         3. The Art of Mindful Living
 
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/lifestyle#fls' smooth>
+                    <Link to='/category/lifestyle/fourthpost'>
                         4. 5 Things You Should Consider Before Buying A Piece Of Art
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/lifestyle#ftls' smooth>
+                    <Link to='/category/lifestyle/fifthpost'>
                         5. "So Your Idea Has Already Been Taken—What Next?"
-                    </HashLink>
+                    </Link>
                 </li>
 
                 <li>
-                    <HashLink to='/category/lifestyle#sls' smooth>
+                    <Link to='/category/lifestyle/sixthpost'>
                         6. The Headline is NOT The Story!
-                    </HashLink>
+                    </Link>
                 </li>
             </ul>
 
@@ -49,5 +56,6 @@ const LifestyleList = () => {
         </div>
     )
 }
+
 
 export default LifestyleList;

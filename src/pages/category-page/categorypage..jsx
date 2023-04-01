@@ -6,6 +6,7 @@ import './categorypage.styles.css';
 
 
 const CategoryPage = () => {
+   
 
     return (
         <div className='categorypage'>
