@@ -73,7 +73,7 @@
 }
 
 .sign-up-container {
-    margin-left: 2em;
+    /* margin-left: 2em; */
 }
 .welcome{
     animation: scale 3s linear infinite;
