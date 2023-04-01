@@ -6,6 +6,10 @@ import BlogDetails from '../../components/blogDetails/blogdetails';
 import './memoir-summary.styles.css';
 
 const Memoir = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const [contentList, setContentList] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
     const memoirRef = collection(db, 'memoir');

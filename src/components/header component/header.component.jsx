@@ -2,8 +2,8 @@ import { React, useState, useEffect } from 'react';
 
 import './header.styles.css';
 import  Logo from '../../assets/logocorrection-removebg-preview.png';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaBars, FaTimes } from 'react-icons/fa';
+import { Link, useNavigate} from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 import { RiAdminLine } from 'react-icons/ri'
 import { FiChevronDown } from 'react-icons/fi';
@@ -13,15 +13,18 @@ import { useLocation } from 'react-router-dom';
 
 
 
+
 const Header = ({ currentUser, setIsAuth }) => {
     const [showheader, setShowHeader] = useState(true);
     const [pathName, setPathName] = useState('');
+    const navigate = useNavigate();
     const location = useLocation();
     const { pathname } = location;
 
     useEffect(() => {
         setPathName(pathname)
-    }, [pathname])
+    }, [pathname]);
+
     const signUserOut = async () => {
         await signOut(auth);
         await setIsAuth(false);
@@ -29,7 +32,7 @@ const Header = ({ currentUser, setIsAuth }) => {
     }
     return (
         <div className="header">
-            <div className="logo">
+            <div className="logo" onClick={() => navigate('/')}>
                 <img src={Logo} alt="logo" />
             </div>
             <div className={`${showheader ? 'show' : 'hidee'} nav-contents`}>
@@ -38,14 +41,14 @@ const Header = ({ currentUser, setIsAuth }) => {
                 </div>
                 {currentUser ?
                     <div className={`${pathName.includes('/createpost') ? 'pathname': ''} about-container`}>
-                        <Link to="/createpost" onClick={() => setShowHeader(!showheader)} className="about"> Create Post</Link>
+                        <Link to="/createpost" onClick={() => {setShowHeader(!showheader)}} className="about"> Create Post</Link>
                     </div>
                     :
                     ""
                 }
 
                 <div className={`${pathName.includes('/mybook') ? 'pathname': ''} book-container`}>
-                    <Link to="/mybook" onClick={() => setShowHeader(!showheader)} className="books"> My Book </Link>
+                    <Link to="/mybook" onClick={() => {setShowHeader(!showheader)}} className="books"> My Book </Link>
                 </div>
                 <div className={`${pathName.includes('/category') ? 'pathname': ''} category-container`}>
                     <Link to="/category" onClick={() => setShowHeader(!showheader)} className="category">

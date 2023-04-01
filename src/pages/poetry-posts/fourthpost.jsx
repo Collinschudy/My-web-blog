@@ -13,6 +13,9 @@ import WithSpinner from '../../components/loader/loader.component';
 
 
 const FourthPoetryPost = ({contentList, setContentList}) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
 
     const [isLoading, setIsLoading] = useState(false);
     const poetryRef = collection(db, 'poetry')

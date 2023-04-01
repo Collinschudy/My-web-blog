@@ -11,6 +11,10 @@ import './memoir.styles.css';
 
 
 const FirstMemoirPost = ({ contentList, setContentList }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const memoirRef = collection(db, 'memoir');
     const [isLoading, setIsLoading] = useState(true);
 

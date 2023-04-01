@@ -9,8 +9,13 @@ import WithSpinner from "../../components/loader/loader.component";
 
 
 const ThirdExcerptPost = ({ contentList, setContentList }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const excerptRef = collection(db, 'excerpts');
     const [isLoading, setIsLoading] = useState(true);
+
 
     useEffect(() => {
         const fetchPosts = async () => {

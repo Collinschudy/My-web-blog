@@ -14,7 +14,7 @@ const Introduction = () => {
             <div className="introduction-text">
                 <div className="text-container">
         
-                    <p className='first-paragraph'><b>Welcome to my creative blog,</b></p>
+                    <p className='first-paragraph'><b>Welcome to my creative blog</b></p>
                     <h3 className='intro-header'>Thrive With Art</h3>
                         <p className='second-paragraph'>Thrive With Art is a place where <em>creativity</em> and inspiration collide to bring you a wide range
                          of content that

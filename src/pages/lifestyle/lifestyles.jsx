@@ -7,6 +7,10 @@ import BlogDetails from '../../components/blogDetails/blogdetails';
 
 
 const Lifestyle = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const [contentList, setContentList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const lifestyleRef = collection(db, 'lifestyle')

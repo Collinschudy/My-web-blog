@@ -10,6 +10,10 @@ import WithSpinner from '../../components/loader/loader.component';
 
 
 const FourthPost = ({ contentList, setContentList }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const [errorMessage, setErrorMessage] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const lifestyleRef = collection(db, 'lifestyle');

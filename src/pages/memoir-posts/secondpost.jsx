@@ -10,6 +10,10 @@ import WithSpinner from "../../components/loader/loader.component";
 
 
 const SecondMemoirPost = ({ contentList, setContentList }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const memoirRef = collection(db, 'memoir');
     const [isLoading, setIsLoading] = useState(true);
 

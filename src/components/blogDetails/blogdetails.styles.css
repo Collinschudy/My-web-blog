@@ -12,7 +12,7 @@
 }
 
 .blog-wrapper{
-    box-shadow: .1em .2em .3em antiquewhite;
+    box-shadow: 0.2em 0em .7em 1px rgb(198, 194, 194);
     font-family: 'Raleway', sans-serif;
     width: 22em;
     min-height: 30em;
@@ -34,7 +34,7 @@
 
 .summaryImage{
     width: 20em;
-    height: 20em;
+    height: 18em;
     cursor: pointer;
 }
 

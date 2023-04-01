@@ -14,6 +14,9 @@ import './poetry.styles.css';
 
 
 const FifthPoetryPost = ({contentList, setContentList}) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
 
     const [isLoading, setIsLoading] = useState(false);
     const poetryRef = collection(db, 'poetry')

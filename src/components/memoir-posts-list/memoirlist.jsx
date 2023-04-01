@@ -10,13 +10,13 @@ const Memoirlist = () => {
             <br/>
             <ul>
                 <li>
-                    <Link to='/category/memoir#fmp'>
+                    <Link to='/category/memoir/firstpost'>
                         1. The Memoir of Rachel Fredrick
                     </Link>
                 </li>
 
                 <li>
-                    <Link to='/category/memoir#smp'>
+                    <Link to='/category/memoir/secondpost'>
                         2. If I could Describe Myself in One Word
                     </Link>
                 </li>

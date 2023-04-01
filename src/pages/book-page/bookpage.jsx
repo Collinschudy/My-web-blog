@@ -1,9 +1,14 @@
 import './bookpage.styles.css';
+import { useEffect } from 'react';
 import image from '../../assets/PicsArt_08-16-11.15.42.png';
 import BookReview from '../../components/bookreviews/review.component';
 
 
 const BookPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     return (
         <div className="bookpage">
             <div className="about-book">
@@ -20,18 +25,34 @@ const BookPage = () => {
                         himself,and a woman embracing her selfhood.
                     </p>
                     <br/>
-                    <p className='flutterwave'>Click <a style={{'color': 'black', 'textDecoration': 'underline'}} href='https://flutterwave.com/pay/y45e4lhygmfi' target='blank'>here </a>
+                    <p 
+                    className='flutterwave'
+                    >
+                        Click 
+                        <a 
+                        style={{'color': 'black', 'textDecoration': 'underline'}} 
+                        href='https://flutterwave.com/pay/y45e4lhygmfi' 
+                        target='blank'>here </a>
                         to buy my book on Flutterwave.
                         <button className='book-link'>
-                            <a href='https://flutterwave.com/pay/y45e4lhygmfi' target='blank'>
+                            <a href='https://flutterwave.com/pay/y45e4lhygmfi' 
+                            target='blank'>
                                 Buy on Flutterwave
                             </a>
                         </button>
                     </p>
-                    <p className='amazon'>Click <a style={{'color': 'black', 'textDecoration': 'underline'}} href='https://www.amazon.com/Pot-Chess-novelette-poetry-looks/dp/B08GV8ZX8G' target='blank'>here </a>
+                    <p 
+                    className='amazon'>
+                        Click 
+                        <a 
+                        style={{'color': 'black', 'textDecoration': 'underline'}} 
+                        href='https://www.amazon.com/Pot-Chess-novelette-poetry-looks/dp/B08GV8ZX8G' 
+                        target='blank'>here </a>
                         to buy my book on Amazon.
                         <button className='book-link'>
-                            <a href='https://www.amazon.com/Pot-Chess-novelette-poetry-looks/dp/B08GV8ZX8G' target='blank'>Buy on Amazon
+                            <a 
+                            href='https://www.amazon.com/Pot-Chess-novelette-poetry-looks/dp/B08GV8ZX8G' 
+                            target='blank'>Buy on Amazon
                             </a>
                         </button>
                     </p>

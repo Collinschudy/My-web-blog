@@ -10,6 +10,10 @@ import WithSpinner from '../../components/loader/loader.component';
 
 
 const FirstPost = ({ contentList, setContentList }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const [ isLoading, setIsLoading ] = useState(true)
     const lifestyleRef = collection(db, 'lifestyle');
 
@@ -24,7 +28,10 @@ const FirstPost = ({ contentList, setContentList }) => {
             })
         }
         fetchPosts()
-    }, [])
+    }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     if (isLoading) {
         return <WithSpinner />

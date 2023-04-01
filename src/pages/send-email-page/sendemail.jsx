@@ -1,10 +1,14 @@
 import './sendemail.styles.css';
 import { useNavigate } from 'react-router-dom';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [title, setTitle] = useState("");

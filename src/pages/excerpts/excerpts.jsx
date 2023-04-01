@@ -19,8 +19,12 @@ const Excerpt = () => {
             })
         };
         fetchPosts()
-    }
+    }, []
     );
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+
     if (isLoading) {
         return <WithSpinner />
     };

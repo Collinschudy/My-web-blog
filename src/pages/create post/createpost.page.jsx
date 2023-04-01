@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { db, storage } from '../../firebase/firebase.utils';
@@ -9,6 +9,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 const CreatePost = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+
     const [title, setTitle] = useState('');
     const [body, setBody] = useState([]);
     const [postImages, setPostImages] = useState([]);

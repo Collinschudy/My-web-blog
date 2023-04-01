@@ -40,9 +40,9 @@
 }
 .introduction-text .first-paragraph{
     font-size: 2em;
-    font-family: 'Dancing Script', cursive;
+    /* font-family: cursive; */
     word-spacing: 0.1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     color:#992600;
     
 }
@@ -143,6 +143,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: justify;
     }
 
     .introduction-text .explore-button:hover{

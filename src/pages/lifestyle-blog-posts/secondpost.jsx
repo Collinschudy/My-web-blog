@@ -10,6 +10,10 @@ import WithSpinner from '../../components/loader/loader.component';
 
 
 const SecondPost = ({ contentList, setContentList }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const lifestyleRef = collection(db, 'lifestyle');
     const [isLoading, setIsLoading] = useState(true)
 

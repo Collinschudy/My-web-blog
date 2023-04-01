@@ -7,6 +7,10 @@ import WithSpinner from '../../components/loader/loader.component';
 
 
 const Poetry = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
+      
     const [contentList, setContentList] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
     const poetryRef = collection(db, 'poetry')
