@@ -75,10 +75,11 @@ const ContactUs = () => {
                         name="message"
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder={message}
+                        className='message-body'
                         required
                     />
 
-                    <input type="submit" value="Send" />
+                    <input className='send-button' type="submit" value="Send" />
                 </form>
             </div>
         </div>

@@ -75,6 +75,7 @@ const Header = ({ currentUser, setIsAuth }) => {
 
 
             </div>
+            <div className='show-name'>Thrive With Art</div>
             <div className="toggle">
                 {
                     showheader ? (

@@ -71,7 +71,9 @@
     margin-top: 1em;
     border-bottom: 1px dotted;
 }
-
+.show-name{
+    display: none;
+}
 .sign-up-container {
     /* margin-left: 2em; */
 }
@@ -295,5 +297,10 @@ a {
     }
     .pathname{
         text-decoration: none;
+    }
+    .show-name{
+        display: block;
+        padding-left: -1em;
+        font-family: 'Charmonman', cursive;
     }
 }
