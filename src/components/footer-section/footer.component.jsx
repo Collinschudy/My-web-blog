@@ -14,7 +14,7 @@ const Footer = () => {
                     <h3><Link to='/category' onClick={handleScrollTop}>CATEGORIES</Link></h3>
                     <ul>
                         <li><Link to='/category/lifestyle' onClick={handleScrollTop}>Lifestyle</Link></li>
-                        <li><Link to='/categoty/poetry' onClick={handleScrollTop}>Poetry</Link></li>
+                        <li><Link to='/category/poetry' onClick={handleScrollTop}>Poetry</Link></li>
                         <li><Link to='/category/memoir'onClick={handleScrollTop}>Memoir</Link></li>
                         <li><Link to='/category/excerpt' onClick={handleScrollTop}>Excerpts</Link></li>
                     </ul>
