@@ -32,7 +32,7 @@ const BookPage = () => {
                         <a 
                         style={{'color': 'black', 'textDecoration': 'underline'}} 
                         href='https://flutterwave.com/pay/y45e4lhygmfi' 
-                        target='blank'>here </a>
+                        target='blank'> here </a>
                         to buy my book on Flutterwave.
                         <button className='book-link'>
                             <a href='https://flutterwave.com/pay/y45e4lhygmfi' 
@@ -47,7 +47,7 @@ const BookPage = () => {
                         <a 
                         style={{'color': 'black', 'textDecoration': 'underline'}} 
                         href='https://www.amazon.com/Pot-Chess-novelette-poetry-looks/dp/B08GV8ZX8G' 
-                        target='blank'>here </a>
+                        target='blank'> here </a>
                         to buy my book on Amazon.
                         <button className='book-link'>
                             <a 

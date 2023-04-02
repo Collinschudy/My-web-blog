@@ -6,6 +6,9 @@
     background-color: rgba(253, 188, 102, 0.3);
     font-family: 'Raleway', sans-serif;
 }
+.bookpage .paragraphs{
+    text-align: justify;
+}
 
 .about-book {
     /* border-radius: 1em; */
