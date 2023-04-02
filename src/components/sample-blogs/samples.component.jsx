@@ -28,7 +28,7 @@ const SampleBlog = () => {
 
                 </div>
                 <p>EXCERPTS FROM VIRGINIA WOOLF</p>
-                <Link className='readmore' to='/category/excerpt/'>Read More</Link>
+                <Link className='readmore' to='/category/excerpt/firstpost'>Read More</Link>
             </div>
 
             <div className="third-sample">

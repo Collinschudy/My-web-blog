@@ -13,9 +13,9 @@
 }
 .arrowUpBox{
   width: 100%;
-  max-width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
+  max-width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 20%;
   position: fixed;
   right: 1.5rem;
   bottom: -3rem;
@@ -28,7 +28,7 @@
   transition: all 1s ease-in-out;
 }
 .arrowUp{
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: rgb(131, 38, 0);
 }
 .arrowScroll{

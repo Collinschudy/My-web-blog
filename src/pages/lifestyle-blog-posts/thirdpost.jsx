@@ -53,11 +53,13 @@ const ThirdPost = ({ contentList, setContentList }) => {
                                 <br />
                                 <p>{body[1]}</p>
                                 <p>{body[2]}</p>
+                                <br/>
                                 <p className='details'><b>{body[3]}</b></p>
                                 <p>{body[4]}</p>
                                 <br />
+                                
                                 <p>{body[5]}</p>
-                                <br />
+                                <br /><br/>
                                 <p><b>{body[6]}</b></p>
                                 <br />
                                 <p>{body[7]}</p>

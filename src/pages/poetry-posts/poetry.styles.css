@@ -1,4 +1,4 @@
-.poetrypage{
+.poetrypage {
     padding-top: 10em;
     display: flex;
     flex-direction: column;
@@ -8,11 +8,11 @@
     background-color: rgba(250, 214, 168, 0.2);
 }
 
-.firstpost, 
-.secondpost, 
+.firstpost,
+.secondpost,
 .thirdpost,
-.fourthpost, 
-.fifthppost{
+.fourthpost,
+.fifthppost {
     width: 60%;
     line-height: 1.5em;
     border-radius: 0 3em 0 0;
@@ -21,28 +21,34 @@
     margin-bottom: 4em;
 }
 
-.firstpost h2, 
-.secondpost h2, 
-.thirdpost h2, 
-.fourthpost h2, 
-.fifthpost h2{
+.firstpost h2,
+.secondpost h2,
+.thirdpost h2,
+.fourthpost h2,
+.fifthpost h2 {
     padding: 1em 0;
 }
 
-.timestamp{
+.timestamp {
     margin-bottom: 1em;
 }
 
 @media screen and (max-width: 700px) {
-    .firstpost, 
-    .secondpost, 
+    .poetrypage {
+        padding-top: 6em;
+    }
+
+    .firstpost,
+    .secondpost,
     .thirdpost,
-    .fourthpost, 
-    .fifthppost{
+    .fourthpost,
+    .fifthppost {
         width: 100%;
         box-shadow: none;
     }
-    .lifescribing, .category-indicator{
+
+    .lifescribing,
+    .category-indicator {
         display: none;
     }
 }

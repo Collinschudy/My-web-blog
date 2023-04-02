@@ -81,4 +81,7 @@
         flex-direction: column;
         width: 100%;
     }
+    .footer-two{
+        margin-bottom: 2em;
+    }
 }
