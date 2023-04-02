@@ -10,6 +10,7 @@ import { FiChevronDown } from 'react-icons/fi';
 import { auth } from '../../firebase/firebase.utils';
 import { signOut } from 'firebase/auth';
 import { useLocation } from 'react-router-dom';
+import { handleScrollTop } from '../backToTop/backToTop';
 
 
 
@@ -37,7 +38,7 @@ const Header = ({ currentUser, setIsAuth }) => {
             </div>
             <div className={`${showheader ? 'show' : 'hidee'} nav-contents`}>
                 <div className={`${pathName ==='/' ? 'pathname': ''} home-container`}>
-                    <Link to="/" onClick={() => setShowHeader(!showheader)} className="home"> Home</Link>
+                    <Link to="/" onClick={() => {setShowHeader(!showheader);handleScrollTop()}} className="home"> Home</Link>
                 </div>
                 {currentUser ?
                     <div className={`${pathName.includes('/createpost') ? 'pathname': ''} about-container`}>
