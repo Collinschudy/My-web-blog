@@ -59,6 +59,7 @@
     .bookorder{
         display: flex;
         align-items: center;
+        margin-top: -6em;
     }
     .book-image{
         height: 80%;
