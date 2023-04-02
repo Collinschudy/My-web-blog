@@ -1,0 +1,7 @@
+.poetry-section h2{
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.poetry-section h2:hover {
+    opacity: 0.7;
+}

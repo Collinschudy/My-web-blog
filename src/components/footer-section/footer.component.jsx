@@ -13,10 +13,10 @@ const Footer = () => {
                 <div className="footer-one">
                     <h3><Link to='/category' onClick={handleScrollTop}>CATEGORIES</Link></h3>
                     <ul>
-                        <li><Link to='/category/lifestyle'>Lifestyle</Link></li>
-                        <li><Link to='/categoty/poetry'>Poetry</Link></li>
-                        <li><Link to='/category/memoir'>Memoir</Link></li>
-                        <li><Link to='/category/excerpt'>Excerpts</Link></li>
+                        <li><Link to='/category/lifestyle' onClick={handleScrollTop}>Lifestyle</Link></li>
+                        <li><Link to='/categoty/poetry' onClick={handleScrollTop}>Poetry</Link></li>
+                        <li><Link to='/category/memoir'onClick={handleScrollTop}>Memoir</Link></li>
+                        <li><Link to='/category/excerpt' onClick={handleScrollTop}>Excerpts</Link></li>
                     </ul>
 
                 </div>
@@ -35,8 +35,8 @@ const Footer = () => {
                     <h3>Quick links</h3>
                     <ul>
                         <li><Link onClick={handleScrollTop} to='/'>Home</Link></li>
-                        <li><Link to='/mybook'>Buy My Book</Link></li>
-                        <li><Link to='/sendemail'>Send me a mail</Link></li>
+                        <li><Link to='/mybook' onClick={handleScrollTop}>Buy My Book</Link></li>
+                        <li><Link to='/sendemail' onClick={handleScrollTop}>Send me a mail</Link></li>
                     </ul>
                 </div>
             </div>

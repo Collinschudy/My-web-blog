@@ -51,12 +51,12 @@
     background-color: antiquewhite;
 }
 
-.category-container{
+/* .category-container{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-}
+} */
 .category-container:hover .subheader{
     display: block;
     position: absolute;
@@ -230,6 +230,10 @@ a {
     
     .category-container .down-icon{
         display: none;
+    }
+    .category-container:hover{
+        text-align: center;
+        
     }
 
     .home-container,
