@@ -9,7 +9,7 @@ const LifestyleList = () => {
 
     return (
         <div className="lifestyle-section">
-            <h2 onClick={() => navigate('/category/lifestyle')}>Lifestyle blog</h2>
+            <h2 onClick={() => navigate('/category/lifestyle')}>Lifestyle</h2>
             <br />
             <ul>
 

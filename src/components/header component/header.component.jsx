@@ -96,9 +96,9 @@ const Header = ({ currentUser, setIsAuth }) => {
             </div>
             <div className="social-icons">
                 <FaFacebook className='socials' />
-                <FaInstagram className='socials' />
+                <FaInstagram className='socials' onClick={() => window.open('https://instagram.com/thrive.with.art?igshid=ZDdkNTZiNTM=', '_blank')}/>
                 <Link to='/sendemail'><HiMail className='socials' /></Link>
-                <FaLinkedin className='socials' />
+                <FaLinkedin className='socials' onClick={() => window.open('https://www.linkedin.com/in/rachel-fredrick-9586861a3', '_blank')}/>
                 {/* <Link to={`/${process.env.REACT_APP_LOGIN}`}><RiAdminLine className='socials' /></Link> */}
             </div>
             
