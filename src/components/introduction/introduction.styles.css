@@ -36,13 +36,13 @@
     align-items: center;
     justify-content: center;
 }
+
 .introduction-text .first-paragraph{
     font-size: 2em;
-   
-    font-family: 'Charmonman', cursive;
+    /* font-family: 'Charmonman', cursive; */
+    font-family: 'Raleway', sans-serif;
     margin-bottom: 1em;
     color:#992600;
-    
 }
 
 .introduction-text .explore-button{
@@ -69,6 +69,7 @@
     width: 75%;
     margin-bottom: 4em;
 }
+
 .text-container .intro-header{
     font-size: 2em;
     margin-bottom: 1.5em;
@@ -145,7 +146,8 @@
         line-height: 1.5em
     }
     .text-container .first-paragraph{
-        font-size: 1.2em;
+        font-size: 1.3em;
+        
         text-align: center;
     }
     .text-container {

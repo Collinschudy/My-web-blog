@@ -43,6 +43,7 @@ import SecondMemoirPost from './pages/memoir-posts/secondpost';
 import FirstExcerptPost from './pages/excerpts-post/firstpost';
 import SecondExcerptPost from './pages/excerpts-post/secondpost';
 import ThirdExcerptPost from './pages/excerpts-post/thirdpost';
+import AboutUs from './pages/aboutus-page/aboutUs-page';
 
 
 
@@ -142,6 +143,7 @@ const App = () => {
 
         <Route exact path='/mybook' element={<BookPage />} />
         <Route exact path='/sendemail' element={<ContactUs />} />
+        <Route exact path='/aboutus' element={<AboutUs />} />
       </Routes>
       <Footer />
     </div>

@@ -1,0 +1,39 @@
+.about-us-page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(253, 188, 102, 0.3);
+    font-family: 'Raleway', sans-serif;
+    padding: 12em 0 4em 0;
+    
+}
+
+.aboutpage-content-wrapper{
+    border-radius: 0.6em;
+    line-height: 2em;
+    width: 100%;
+    max-width: 40em;
+    background-color: #fff;
+    padding: 1.5em;
+    text-align: justify;
+}
+
+
+#first{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+#second, #third, #fourth, #fifth{
+    margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 700px){
+    .about-us-page{
+        padding: 6em 1em 1em 1em;
+    }
+    #first{
+        font-size: 1.2em;
+    }
+}

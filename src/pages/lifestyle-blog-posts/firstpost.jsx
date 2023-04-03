@@ -43,7 +43,7 @@ const FirstPost = ({ contentList, setContentList }) => {
             {
                 contentList.map((content) => {
                     const { body, fileUrls, title, createdAt, tag } = content;
-                    console.log({ content111: content })
+                   
                     if (tag === 'firstpost') {
                         const name_1 = body[5].slice(19);
                         const name_2 = body[9].slice(17);

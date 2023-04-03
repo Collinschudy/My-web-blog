@@ -47,6 +47,9 @@ const Header = ({ currentUser, setIsAuth }) => {
                     :
                     ""
                 }
+                <div className={`${pathName.includes('/aboutus') ? 'pathname': ''} about-us-container`}>
+                    <Link to="/aboutus" onClick={() => {setShowHeader(!showheader)}} className="about-us"> About Us </Link>
+                </div>
 
                 <div className={`${pathName.includes('/mybook') ? 'pathname': ''} book-container`}>
                     <Link to="/mybook" onClick={() => {setShowHeader(!showheader)}} className="books"> My Book </Link>

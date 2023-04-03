@@ -1,6 +1,6 @@
 import './samples.styles.css';
 import { Link, useNavigate } from 'react-router-dom';
-import image_1 from '../../assets/1_20230226_173936_0000.png';
+import image_1 from '../../assets/IMG-20230403-WA0000.jpg';
 import image_2 from '../../assets/images (12).jpeg';
 import image_3 from '../../assets/images (7).jpeg';
 
