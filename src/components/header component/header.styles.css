@@ -222,7 +222,7 @@ a {
         height: calc(100vh - 5em);
         position: absolute;
         z-index: 10000;
-        top: 6.6em;
+        top: 6.5em;
         bottom: 0;
         display: flex;
         flex-direction: column;

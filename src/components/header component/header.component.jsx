@@ -99,11 +99,9 @@ const Header = ({ currentUser, setIsAuth }) => {
                 <FaInstagram className='socials' />
                 <Link to='/sendemail'><HiMail className='socials' /></Link>
                 <FaLinkedin className='socials' />
-                <Link to='/signin'><RiAdminLine className='socials' /></Link>
+                {/* <Link to={`/${process.env.REACT_APP_LOGIN}`}><RiAdminLine className='socials' /></Link> */}
             </div>
-            {/* <div className={`${showSubheader ? 'showsub' : ''} sub-con`}>
-                <SubHeader />
-            </div> */}
+            
         </div>
 
     )

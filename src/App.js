@@ -54,6 +54,7 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState('');
   const [arrowScrollUp, setArrowScrollUp] = useState(false);
   const [scrollUp, setScrollUp] = useState(false);
+  const loginKey = `${process.env.REACT_APP_LOGIN}`;
 
 
 
@@ -109,7 +110,7 @@ const App = () => {
       <Header currentUser={currentUser} />
       <Routes>
         <Route exact path='/' element={<HomePage />} />
-        <Route exact path='/signin' element={<SignIn setIsAuth={setIsAuth} />} />
+        <Route exact path={`/${process.env.REACT_APP_LOGIN}`} element={<SignIn setIsAuth={setIsAuth} />} />
         <Route exact path='/createpost' element={<CreatePost />} />
         <Route exact path='/category/' element={<CategoryPage />} />
 
