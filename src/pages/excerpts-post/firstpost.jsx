@@ -47,7 +47,7 @@ const FirstExcerptPost = ({ contentList, setContentList }) => {
 
                     if (tag === 'firstpost') {
                         return (
-                            <div className={tag} id='fep'>
+                            <div className={tag} key={tag}>
 
                                 <h2>{title}</h2>
                                 <div className="img-container">

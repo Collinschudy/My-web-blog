@@ -48,7 +48,7 @@ const SecondPost = ({ contentList, setContentList }) => {
                     const name_5 = body[10].slice(40);
                     const name_6 = body[11].slice(12);
                     return (
-                        <div className={tag} id='lss'>
+                        <div className={tag} key={tag}>
                             <h2>{title}</h2>
                             <div className="img-container">
                                 <img className='scream' src={fileUrls[0]} alt='postimage' />

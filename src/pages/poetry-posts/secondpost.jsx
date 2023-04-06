@@ -44,7 +44,7 @@ const SecondPoetryPost = ({contentList, setContentList}) => {
 
                     if (tag === 'secondpost'){
                         return (
-                            <div className={tag} id='spp'>
+                            <div className={tag} key={tag}>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[0]} alt='postimage' />
                                 </div>

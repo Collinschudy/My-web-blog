@@ -6,7 +6,11 @@
 
 .App {
   width: 100%;
+  
 }
+/* *{
+  opacity: 0.8;
+} */
 
 .scroll{
   bottom: 6rem;

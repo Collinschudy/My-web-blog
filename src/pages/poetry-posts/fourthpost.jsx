@@ -44,7 +44,7 @@ const FourthPoetryPost = ({contentList, setContentList}) => {
 
                     if (tag === 'fourthpost'){
                         return (
-                            <div className={tag} id='forthpp'>
+                            <div className={tag} key={tag}>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[0]} alt='postimage' />
                                 </div>

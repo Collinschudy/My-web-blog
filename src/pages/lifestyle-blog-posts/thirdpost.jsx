@@ -14,27 +14,41 @@ const ThirdPost = ({ contentList, setContentList }) => {
         window.scrollTo(0, 0)
       }, []);
       
-    const [ isLoading, setIsLoading ] = useState(true)
+    const [ isLoading, setIsLoading ] = useState(true);
     const lifestyleRef = collection(db, 'lifestyle');
 
     useEffect(() => {
         const fetchPosts = async () => {
+            try{
+                onSnapshot(lifestyleRef, data => {
 
-            await onSnapshot(lifestyleRef, data => {
-
-                setContentList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-
-                setIsLoading(false);
-            })
+                    setContentList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+    
+                    setIsLoading(false);
+                })
+            }catch (err){
+                console.log(err)
+                
+            }
+           
         }
         fetchPosts()
     }, [])
+  
 
     if (isLoading) {
         return <WithSpinner />
     }
+    // if (error === false){
+    //     return (
+    //         <div 
+    //         style={{'textAlign': 'center', 'fontSize': '1.5em',
+    //         'padding': '10em 0 5em 0'}} className="error">Something went wrong!</div>
+    //     )
+    // }
 
     return (
+       
         <div className="lifestyle-page">
             <div className="category-indicator">Lifestyle</div>
             {
@@ -43,7 +57,7 @@ const ThirdPost = ({ contentList, setContentList }) => {
                    
                     if (tag === 'thirdpost') {
                         return (
-                            <div className={content.tag} id='lst'>
+                            <div className={content.tag} key={tag}>
                                 <h2 >{title}</h2>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[0]} alt='postimage' />
@@ -149,6 +163,7 @@ const ThirdPost = ({ contentList, setContentList }) => {
             }
             < div className="lifescribing">Lifestyle</div>
         </div >
+        
     )
 }
 

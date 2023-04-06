@@ -45,7 +45,7 @@ const SecondExcerptPost = ({ contentList, setContentList }) => {
 
                     if (tag === 'secondpost') {
                         return (
-                            <div className={tag} id='sep'>
+                            <div className={tag} key={tag}>
                                 <h2>{title}</h2>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[0]} alt='postimage' />

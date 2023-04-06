@@ -50,7 +50,7 @@ const FirstPost = ({ contentList, setContentList }) => {
                         const name_3 = body[12].slice(13);
                         const name_4 = body[15].slice(15);
                         return (
-                            <div className={tag} id='lsf'>
+                            <div className={tag} key={tag}>
                                 <h2 >{title}</h2>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[3]} alt='postimage' />

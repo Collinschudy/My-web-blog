@@ -319,5 +319,6 @@ a {
         display: block;
         padding-left: -1em;
         font-family: 'Charmonman', cursive;
+        font-weight: 700;
     }
 }

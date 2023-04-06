@@ -45,7 +45,7 @@ const ThirdExcerptPost = ({ contentList, setContentList }) => {
 
                     if (tag === 'thirdpost') {
                         return (
-                            <div className={tag} id='tep'>
+                            <div className={tag} key={tag} >
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[0]} alt='postimage' />
                                 </div>

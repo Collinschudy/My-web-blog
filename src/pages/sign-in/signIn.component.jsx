@@ -26,7 +26,7 @@ const SignIn = () => {
         <div className="signin">
             <div className="signin-wrapper">
                 <div className="google-img-container">
-                    <img className='google-icon' src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg' />
+                    <img className='google-icon' src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg' alt='google icon'/>
                 </div>
 
                 <span onClick={signInWithGoogle}>

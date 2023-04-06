@@ -50,7 +50,7 @@ const FourthPost = ({ contentList, setContentList }) => {
 
                     if (tag === 'fourthpost') {
                         return (
-                            <div className={tag} id='fls'>
+                            <div className={tag} key={tag}>
                                 <h2>{title}</h2>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[1]} alt='postimage' />

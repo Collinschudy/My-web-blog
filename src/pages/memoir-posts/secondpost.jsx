@@ -45,7 +45,7 @@ const SecondMemoirPost = ({ contentList, setContentList }) => {
 
                      if (tag === 'secondpost') {
                         return (
-                            <div className={tag} id='smp'>
+                            <div className={tag} key={tag}>
                                 <h2>{title}</h2>
                                 <div className="img-container">
                                     <img className='scream' src={fileUrls[1]} alt='postimage' />
