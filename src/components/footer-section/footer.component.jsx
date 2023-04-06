@@ -35,6 +35,7 @@ const Footer = () => {
                     <h3>Quick links</h3>
                     <ul>
                         <li><Link onClick={handleScrollTop} to='/'>Home</Link></li>
+                        <li><Link onClick={handleScrollTop} to='/aboutus'>About Us</Link></li>
                         <li><Link to='/mybook' onClick={handleScrollTop}>Buy My Book</Link></li>
                         <li><Link to='/sendemail' onClick={handleScrollTop}>Send me a mail</Link></li>
                     </ul>
