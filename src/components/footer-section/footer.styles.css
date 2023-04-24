@@ -31,6 +31,7 @@
     text-transform: uppercase;
     font-weight: 500;
 }
+.footer-one ul,
 .footer-three ul{
     display: flex;
     align-items: center;
@@ -73,7 +74,8 @@
 
 @media screen and (max-width: 700px) {
     .footer-wrapper{
-        height: 41em;
+        height: 45em;
+        width: 100%;
         padding-top: 4em;
     }
     .footer-box{
