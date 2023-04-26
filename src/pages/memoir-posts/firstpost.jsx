@@ -7,7 +7,7 @@ import { selectMemoirContentList } from "../../redux/contents/content.selector";
 import { setMemoirContentList } from "../../redux/contents/setContent.action";
 import WithSpinner from "../../components/loader/loader.component";
 import './memoir.styles.css';
-
+import commentBox from 'commentbox.io';
 
 
 const FirstMemoirPost = ({ contentList, setContentList }) => {
@@ -33,11 +33,19 @@ const FirstMemoirPost = ({ contentList, setContentList }) => {
         fetchPosts()
     }, [])
 
+    useEffect(() => {
+        const removeCommentBox = commentBox('5635068789784576-proj', { className: 'styles' });
+        return () => {
+            removeCommentBox()
+        }
+      })
+
     if (isLoading) {
         return <WithSpinner />
     };
 
     return (
+        <>
         <div className="memoirpage">
             <div className="category-indicator-m">Memoir</div>
             {
@@ -91,6 +99,8 @@ const FirstMemoirPost = ({ contentList, setContentList }) => {
             }
             < div className="lifescribing">Memoir</div>
         </div>
+        <div className={`commentbox ${'styles'}`}/>
+        </>
     )
 }
 

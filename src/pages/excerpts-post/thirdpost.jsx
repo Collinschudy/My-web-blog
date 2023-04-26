@@ -6,7 +6,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { selectExcerptContentList } from "../../redux/contents/content.selector";
 import { setExcerptContentList } from "../../redux/contents/setContent.action";
 import WithSpinner from "../../components/loader/loader.component";
-
+import commentBox from 'commentbox.io'
 
 const ThirdExcerptPost = ({ contentList, setContentList }) => {
     useEffect(() => {
@@ -31,11 +31,19 @@ const ThirdExcerptPost = ({ contentList, setContentList }) => {
         fetchPosts()
     }, [])
 
+    useEffect(() => {
+        const removeCommentBox = commentBox('5635068789784576-proj', { className: 'styles' });
+        return () => {
+            removeCommentBox()
+        }
+      })
+
     if (isLoading) {
         return <WithSpinner />
     }
 
     return (
+        <>
         <div className="excerptpage">
             <div className="category-indicator">Excerpts</div>
 
@@ -78,6 +86,8 @@ const ThirdExcerptPost = ({ contentList, setContentList }) => {
             }
             <div className="lifescribing">Excerpts</div>
         </div>
+         <div className={`commentbox ${'styles'}`} />
+         </>
     )
 }
 

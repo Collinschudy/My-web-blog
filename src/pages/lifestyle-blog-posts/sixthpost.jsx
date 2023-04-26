@@ -7,7 +7,7 @@ import { selectLifestyleContentList } from '../../redux/contents/content.selecto
 import { db } from '../../firebase/firebase.utils';
 import { collection, onSnapshot } from 'firebase/firestore';
 import WithSpinner from '../../components/loader/loader.component';
-
+import commentBox from 'commentbox.io';
 
 const SixthPost = ({ contentList, setContentList }) => {
     useEffect(() => {
@@ -30,11 +30,19 @@ const SixthPost = ({ contentList, setContentList }) => {
         fetchPosts()
     }, [])
 
+    useEffect(() => {
+        const removeCommentBox = commentBox('5635068789784576-proj', { className: 'styles' });
+        return () => {
+            removeCommentBox()
+        }
+      })
+
     if (isLoading) {
         return <WithSpinner />
     }
 
     return (
+        <>
         <div className="lifestyle-page">
             <div className="category-indicator">Lifestyle</div>
             {
@@ -101,6 +109,8 @@ const SixthPost = ({ contentList, setContentList }) => {
             }
             < div className="lifescribing">Lifestyle</div>
         </div >
+        <div className={`commentbox ${'styles'}`}/>
+        </>
     )
 }
 

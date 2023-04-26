@@ -3,13 +3,10 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectPoetryContentList } from '../../redux/contents/content.selector';
 import { setPoetryContentList } from '../../redux/contents/setContent.action';
-
-
 import { db } from '../../firebase/firebase.utils';
 import { collection, onSnapshot } from 'firebase/firestore';
-
 import WithSpinner from '../../components/loader/loader.component';
-
+import commentBox from 'commentbox.io'
 
 
 const ThirdPoetryPost = ({contentList, setContentList}) => {
@@ -30,12 +27,20 @@ const ThirdPoetryPost = ({contentList, setContentList}) => {
         fetchPosts()
 
     })
+    
+    useEffect(() => {
+        const removeCommentBox = commentBox('5635068789784576-proj', { className: 'styles' });
+        return () => {
+            removeCommentBox()
+        }
+      })
 
     if (isLoading) {
         return <WithSpinner />
     };
 
     return (
+        <>
         <div className="poetrypage">
             <div className="category-indicator">Poetry</div>
             {
@@ -83,6 +88,8 @@ const ThirdPoetryPost = ({contentList, setContentList}) => {
             }
             < div className="lifescribing">Poetry</div>
         </div>
+        <div className={`commentbox ${'styles'}`}/>
+        </>
 
 
     )
