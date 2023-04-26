@@ -7,7 +7,7 @@ import { selectLifestyleContentList } from '../../redux/contents/content.selecto
 import { db } from '../../firebase/firebase.utils';
 import { collection, onSnapshot } from 'firebase/firestore';
 import WithSpinner from '../../components/loader/loader.component';
-
+import Comment from '../../components/comment.component';
 
 const FirstPost = ({ contentList, setContentList }) => {
     useEffect(() => {
@@ -50,6 +50,7 @@ const FirstPost = ({ contentList, setContentList }) => {
                         const name_3 = body[12].slice(13);
                         const name_4 = body[15].slice(15);
                         return (
+                            <>
                             <div className={tag} key={tag}>
                                 <h2 >{title}</h2>
                                 <div className="img-container">
@@ -99,6 +100,8 @@ const FirstPost = ({ contentList, setContentList }) => {
                                 <p>{body[23]}</p>
                                 <p style={{ 'marginTop': '1em' }}>{body[24]}</p>
                             </div>
+                            <Comment />
+                            </>
                         )
                     }
                 })
