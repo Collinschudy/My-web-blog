@@ -7,7 +7,8 @@ import { selectLifestyleContentList } from '../../redux/contents/content.selecto
 import { db } from '../../firebase/firebase.utils';
 import { collection, onSnapshot } from 'firebase/firestore';
 import WithSpinner from '../../components/loader/loader.component';
-import Comment from '../../components/comment.component';
+
+import commentBox from 'commentbox.io';
 
 const FirstPost = ({ contentList, setContentList }) => {
     useEffect(() => {
@@ -29,15 +30,21 @@ const FirstPost = ({ contentList, setContentList }) => {
         }
         fetchPosts()
     }, []);
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+ 
 
+      useEffect(() => {
+        const removeCommentBox = commentBox('5635068789784576-proj', { className: 'styles' });
+        return () => {
+            removeCommentBox()
+        }
+      })
+    
     if (isLoading) {
         return <WithSpinner />
     }
 
     return (
+        <>
         <div className="lifestyle-page">
             <div className="category-indicator">Lifestyle</div>
             {
@@ -50,7 +57,7 @@ const FirstPost = ({ contentList, setContentList }) => {
                         const name_3 = body[12].slice(13);
                         const name_4 = body[15].slice(15);
                         return (
-                            <>
+                            
                             <div className={tag} key={tag}>
                                 <h2 >{title}</h2>
                                 <div className="img-container">
@@ -100,14 +107,15 @@ const FirstPost = ({ contentList, setContentList }) => {
                                 <p>{body[23]}</p>
                                 <p style={{ 'marginTop': '1em' }}>{body[24]}</p>
                             </div>
-                            <Comment />
-                            </>
+                           
                         )
                     }
                 })
             }
             < div className="lifescribing">Lifestyle</div>
         </div >
+        <div className={`commentbox ${'styles'}`}/>
+        </>
     )
 }
 
