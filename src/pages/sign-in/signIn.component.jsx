@@ -16,11 +16,12 @@ const SignIn = () => {
             await signInWithPopup(auth, provider);
             await setIsAuth(true);
             
+           
              
         }catch (error) {
             (console.log(error.message))
         }
-        navigate('/');
+       auth &&  navigate('/');
     }
     return (
         <div className="signin">
