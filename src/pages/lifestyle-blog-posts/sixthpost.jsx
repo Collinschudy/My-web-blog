@@ -54,7 +54,7 @@ const SixthPost = ({ contentList, setContentList }) => {
                             <div className={tag} key={tag}>
                                 <h2>{title}</h2>
                                 <div className="img-container">
-                                    <img className='scream' src={fileUrls[0]} alt='postimage' />
+                                    <img className='scream' src={${`https://res.cloudinary.com/op2rqidg/image/upload/v1793537616/the_link_between_creativity_and_depression.jpg`}} alt='postimage' />
                                 </div>
                                 <p className="timestamp">{createdAt}</p>
                                 <p>{body[0]}</p>
